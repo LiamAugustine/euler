@@ -18,7 +18,7 @@ int main()
   {
     if(c % 3 == 0)
       sum += c;
-    if(c % 5 == 0)
+    else if(c % 5 == 0)
       sum += c;
   }
 
