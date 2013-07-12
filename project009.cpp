@@ -10,17 +10,19 @@
 using namespace std;
 
 int main(){
-	unsigned long m = 1,
-			n = 2,
-			a = 0,
+	int	a = 0,
 			b = 0,
 			c = 0;
-	while((a + b + c) != 1000){
-		a = (n*n) - (m*m);
-		b = 2 * n * m;
-		c = (n*n) + (m*m);
-		if(a+b+c == 1000) cout << a*b*c << endl;
-		m++;
-		if(m == n) n++;
-	}
+	for(int n = 0; n < 1000/2; n++){
+		for{int m = 0; m < n; m++){
+			a = (n*n) - (m*m);
+			b = 2 * n * m;
+			c = (n*n) + (m*m);
+			if(a+b+c == 1000) {
+				cout << a*b*c << endl;
+				return;
+				}
+		}
+	)
+	return 0;
 }
