@@ -10,7 +10,7 @@
 using namespace std;
 
 int main(){
-	int m = 1,
+	unsigned long m = 1,
 			n = 2,
 			a = 0,
 			b = 0,
@@ -19,8 +19,7 @@ int main(){
 		a = (n*n) - (m*m);
 		b = 2 * n * m;
 		c = (n*n) + (m*m);
-		
-		cout << a*b*c << endl;
+		if(a+b+c == 1000) cout << a*b*c << endl;
 		m++;
 		if(m == n) n++;
 	}
