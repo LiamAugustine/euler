@@ -14,30 +14,37 @@
 
 int main(){
 	std::vector <int> primes;
-	
-	//Load primes with all numbers between 2 - 1999999
-	for(int c = 2; c < SIZE; c++){
+	primes.push_back(2);
+	primes.push_back(3);
+
+	//Load primes with number
+	for(int c = 5; c < SIZE; c += 2){
 		primes.push_back(c);
 	}
-	
+
+	std::cout << "Sieve out primes" << std::endl;	
 	//Sieve out primes
-	int count = 0;
-	int prime = 2;
-	while(prime < SIZE){
-		for(int c = 0; c < primes.size(); c++){
+	int count = 1;
+	int prime = 3;
+	while(prime < 1415){
+		//std::cout << "While" << std::endl;
+		for(int c = 0; c < primes.size(); c++){ 
 			if(primes[c] % prime == 0 && primes[c] != prime){
-				primes.erase(c);
+				primes.erase(primes.begin() + c);
 			}
 		}
+		std::cout << prime << std::endl;
 		prime = primes[++count];
-		primes.shrink_to_fit();
 	}
 	
 	//Sum the primes
-	int sum;
+	unsigned long sum;
 	for(int c = 0; c < primes.size(); c++){
 		sum += primes[c];
+		std::cout << sum << std::endl;
 	}
 	
+
 	std::cout << sum << std::endl;
+
 }
