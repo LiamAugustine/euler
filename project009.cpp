@@ -14,15 +14,14 @@ int main(){
 			b = 0,
 			c = 0;
 	for(int n = 0; n < 1000/2; n++){
-		for{int m = 0; m < n; m++){
+		for(int m = 0; m < n; m++){
 			a = (n*n) - (m*m);
 			b = 2 * n * m;
 			c = (n*n) + (m*m);
 			if(a+b+c == 1000) {
 				cout << a*b*c << endl;
-				return;
 				}
 		}
-	)
+	}
 	return 0;
 }

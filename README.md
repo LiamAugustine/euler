@@ -1,4 +1,4 @@
-euler
+Projecteuler.net
 =====
 
-Project euler challenges
+Coding is fun!
